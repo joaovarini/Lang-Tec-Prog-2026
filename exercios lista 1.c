@@ -56,14 +56,32 @@ int main(int argc, char *argv[]) {
         printf("%d", valorDecimal & 1);
     }
     printf("\n\n///// Exercicio 4 /////\n");
+     double salarioFixo, vendas, total;
+
+    printf("Insira o salario fixo do vendedor: ");
+    scanf("%lf", &salarioFixo);
+
+    printf("Insira o valor total das vendas: ");
+    scanf("%lf", &vendas);
+
+    total = salarioFixo + (vendas * 0.15);
+
+    printf("Total a receber no final do mes: R$ %.2f\n", total);
     
-    double salarioFixo, vendas, total;
+    printf("\n\n///// Exercicio 5 /////\n");
+    double a, b, c, d;
+    double soma, media, produtorio;
 
-    scanf("%lf %lf", &salarioFixo, &vendas);
+    printf("Digite 4 valores: ");
+    scanf("%lf %lf %lf %lf", &a, &b, &c, &d);
 
-    total = salarioFixo + vendas * 0.15;
+    soma = a + b + c + d;
+    media = soma / 4;
+    produtorio = a * b * c * d;
 
-    printf("TOTAL = R$ %.2f\n", total);
+    printf("Soma: %.2f\n", soma);
+    printf("Media: %.2f\n", media);
+    printf("Produtorio: %.2f\n", produtorio);
 
 
     return 0;
