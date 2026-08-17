@@ -83,6 +83,47 @@ int main(int argc, char *argv[]) {
     printf("Media: %.2f\n", media);
     printf("Produtorio: %.2f\n", produtorio);
 
+    printf("\n\n///// Exercicio 6 /////\n");
+     int idadeDias, anos, meses, dias;
+
+    printf("Digite a idade em dias: ");
+    scanf("%d", &idadeDias);
+
+    anos = idadeDias / 365;
+    idadeDias = idadeDias % 365;
+
+    meses = idadeDias / 30;
+    dias = idadeDias % 30;
+
+    printf("%d ano(s)\n", anos);
+    printf("%d mes(es)\n", meses);
+    printf("%d dia(s)\n", dias);
+    
+    printf("\n\n///// Exercicio 7 /////\n");
+    double raio, volume;
+    
+    printf ("Digite o valor do raio:");
+    scanf("%lf", &raio);
+    
+    volume = (4/3.0) * 3.14159 * (raio*raio*raio);
+    
+    printf("O volume da esfera é: %.2lf", volume);
+    
+    printf("\n\n///// Exercicio 8 /////\n");
+    
+    double x1,x2,y1,y2;
+    double distancia;
+    
+    printf("Digite os valores x1,y1 e x2,y2: ");
+    scanf("%lf", &x1);
+    scanf("%lf", &y1);
+    scanf("%lf", &x2);
+    scanf("%lf", &y2);
+    
+    distancia = sqrt((x2-x1)*(x2-x1) + (y2-y1)*(y2-y1));
+    
+    printf("A distancia dos valores e: %.2lf", distancia);
+
 
     return 0;
 }
