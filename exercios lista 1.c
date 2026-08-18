@@ -36,25 +36,32 @@ int main(int argc, char *argv[]) {
     printf("\nNumero na forma de notacao cientifica: %.2lf x 10^%d\n", numNotacao, n);
 
     printf("\n\n///// Exercicio 3 /////\n");
-
-    int valorDecimal;
-
-    printf("Digite um valor menor OU igual 64: ");
-    scanf("%d", &valorDecimal);
-
-    if (valorDecimal <= 0 || valorDecimal > 64) {
-        printf("Valor invalido!\n");
-    }else {
-        printf("\nRepresentacao binaria de %d: ", valorDecimal);
-        printf("%d", (valorDecimal >> 7) & 1);
-        printf("%d", (valorDecimal >> 6) & 1);
-        printf("%d", (valorDecimal >> 5) & 1);
-        printf("%d", (valorDecimal >> 4) & 1);
-        printf("%d", (valorDecimal >> 3) & 1);
-        printf("%d", (valorDecimal >> 2) & 1);
-        printf("%d", (valorDecimal >> 1) & 1);
-        printf("%d", valorDecimal & 1);
-    }
+    
+	int n, res;
+	int bit_64, bit_32, bit_16, bit_8, bit_4, bit_2, bit_1;
+	printf("insira o valor a ser convertido menor OU igual a 64: ");
+	scanf("%d",&n);
+	
+	bit_64 = n%2;
+	res = res/2;
+	
+	bit_32 = res%2;
+	res = res/2;
+	
+	bit_16 = res%2;
+	res = res/2;
+	
+	bit_8 = res%2;
+	res = res/2;
+	
+	bit_4 = res%2;
+	res = res/2;
+	
+	bit_2 = res%2;
+	res = res/2;
+	
+	printf("O numero %d em bin = %d%d%d%d%d%d%d", n, res%2, bit_2,bit_4,bit_8,bit_16,bit_32,bit_64);
+    
     printf("\n\n///// Exercicio 4 /////\n");
      double salarioFixo, vendas, total;
 
