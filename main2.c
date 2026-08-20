@@ -129,17 +129,16 @@ int main(int argc, char *argv[]) {
 	
 	printf("%d eh o maior\n", maior);
 
-	printf("\n///// Exercicio 10 /////\n\n");
-	int a, b, c;
-	int maiorAB, maior;
+	printf("\n///// Exercicio 10 feito em sala /////\n\n");
 	
-	printf("Digite tres valores:\n");
+	int a, b, c, maior_temp,maior;
+	printf("Insira os valores a serem comparados:\n");
 	scanf("%d %d %d", &a, &b, &c);
 	
-	maiorAB = (a + b + abs(a - b)) / 2;
-	maior = (maiorAB + c + abs(maiorAB - c)) /2;
+	maior_temp = (a + b) + abs(a - b)) /2;
+	maior = ((maior_temp + c) + abs(maior_temp - c)) /2;
 	
-	printf("%d eh o maior\n", maior);
+	printf("o maior entre [%d][%d][%d] = d", a,b,c, maior);
 	
 		return 0;
 }
