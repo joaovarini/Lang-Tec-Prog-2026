@@ -118,7 +118,18 @@ int main(int argc, char *argv[]) {
 	printf("Litros gastos: %.3f\n", litros);
 	
 	printf("\n///// Exercicio 10 /////\n\n");
+	int a, b, c;
+	int maiorAB, maior;
 	
+	printf("Digite tres valores:\n");
+	scanf("%d %d %d", &a, &b, &c);
+	
+	maiorAB = (a + b + abs(a - b)) / 2;
+	maior = (maiorAB + c + abs(maiorAB - c)) /2;
+	
+	printf("%d eh o maior\n", maior);
+
+	printf("\n///// Exercicio 10 /////\n\n");
 	int a, b, c;
 	int maiorAB, maior;
 	
