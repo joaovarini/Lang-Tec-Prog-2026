@@ -6,8 +6,10 @@
 int main(int argc, char *argv[]) {
 	
 	int num1, num2, num3, num4, num5, num6, num7, num8, num9, num10, num11, firstValid, secondValid;
+
+	printf("\n=====EXERCICIO 1=====\n");
 	
-	printf("Digite seu CPF nessa formata�ao - x x x . x x x . x x x - x x: \n");
+	printf("Digite seu CPF nessa formataçao - x x x . x x x . x x x - x x: \n");
 	scanf("%d %d %d . %d %d %d . %d %d %d - %d %d", &num1, &num2, &num3, &num4, &num5, &num6, &num7, &num8, &num9, &num10, &num11);
 	
 	
@@ -49,9 +51,52 @@ int main(int argc, char *argv[]) {
 		printf("\n\nExecute o codigo novamente...");
 	}
 	
+	double celsius, fahrenheit;
+	int escolha;
+	printf("\n=====EXERCICIO 2=====\n");
 	
+	printf("Voce quer converter 1- Celsius p/ Fahrenheit OU 2- Fahrenheit p/ Celsius?\n");
+	scanf("%d", &escolha);
 	
-	
+	 if (escolha == 1){
+	 	printf("Digite o valor em Celsius:\n");
+	 	scanf("%lf", &celsius); 
+	 	
+	 	fahrenheit = (celsius * 9/5) + 32;
+	 	
+	 	printf("O valor em Fahrenheit eh: %.2lf", fahrenheit);
+	 }
+	 else if (escolha == 2){
+	 	printf("Digite o valor em Fahrenheit:\n");
+	 	scanf("%lf", &fahrenheit);
+	 	
+	 	celsius = (fahrenheit - 32) * 5/9;
+	 	
+	 	printf("O valor em Celsius eh: %.2lf", celsius);
+	 }
+	 else{
+	 	printf("Esse valor nao eh aceito!");
+	 }
+	 
+	 printf("\n\n=====EXERCICIO 3=====\n");
+	 
+	 double nota1, nota2, nota3, media, notaParaAtingir;
+	 
+	 printf("Digite as tres notas para calcular a média e o resultado de aprovação.:\n");
+	 scanf("%lf %lf %lf", &nota1, &nota2, &nota3);
+	 
+	 media = (nota1 + nota2 + nota3) / 3;
+	 
+	 if (media >= 7 && media <= 10){
+	 	printf("Voce esta aprovado!");
+	 }
+	 else if (media >= 4 && media <= 6.9){
+	 	notaParaAtingir = 10 - media;
+	 	printf("Voce ta de exame! e para passar te falta %.2lf",notaParaAtingir);
+	 }
+	 else {
+	printf("Voce esta reprovado!");
+	 }
 	
 	return 0;
 }
