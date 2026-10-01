@@ -10,19 +10,19 @@ void prova1_questao0()
 
     printf("\n--- ADSIS-N-A - QUESTAO 0 ---\n");
 
-    printf("Digite o 1º número: ");
+    printf("Digite o 1Âº nÃºmero: ");
     scanf("%d", &n1);
 
-    printf("Digite o 2º número: ");
+    printf("Digite o 2Âº nÃºmero: ");
     scanf("%d", &n2);
 
-    printf("Digite o 3º número: ");
+    printf("Digite o 3Âº nÃºmero: ");
     scanf("%d", &n3);
 
-    printf("Digite o 4º número: ");
+    printf("Digite o 4Âº nÃºmero: ");
     scanf("%d", &n4);
 
-    printf("Digite o 5º número: ");
+    printf("Digite o 5Âº nÃºmero: ");
     scanf("%d", &n5);
 
     printf("\nNumeros consecutivos encontrados:\n");
@@ -131,7 +131,7 @@ void prova1_questao2()
 {
     int A, B, C;
 
-    printf("\n--- PROVA 1 - QUESTÃO 2 ---\n");
+    printf("\n--- PROVA 1 - QUESTÃƒO 2 ---\n");
 
     A = 6;
     B = 0;
@@ -188,16 +188,16 @@ void prova2_questao0()
 
     printf("\n--- ESOFT-M-A - QUESTAO 0 ---\n");
 
-    printf("Digite o 1º numero: ");
+    printf("Digite o 1Âº numero: ");
     scanf("%d", &n1);
 
-    printf("Digite o 2º numero: ");
+    printf("Digite o 2Âº numero: ");
     scanf("%d", &n2);
 
-    printf("Digite o 3º numero: ");
+    printf("Digite o 3Âº numero: ");
     scanf("%d", &n3);
 
-    printf("Digite o 4º numero: ");
+    printf("Digite o 4Âº numero: ");
     scanf("%d", &n4);
 
     printf("\nNumeros impares:\n");
@@ -469,7 +469,7 @@ void prova3_questao2()
             break;
 
         default:
-            printf("\noperador inválido\n");
+            printf("\noperador invÃ¡lido\n");
     }
 }
 
