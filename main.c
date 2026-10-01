@@ -1,25 +1,557 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int mult (int digto, int valor){
- return digto*valor;
+void prova1_questao0()
+{
+    int n1, n2, n3, n4, n5;
+    int achou;
+
+    achou = 0;
+
+    printf("\n--- ADSIS-N-A - QUESTAO 0 ---\n");
+
+    printf("Digite o 1º número: ");
+    scanf("%d", &n1);
+
+    printf("Digite o 2º número: ");
+    scanf("%d", &n2);
+
+    printf("Digite o 3º número: ");
+    scanf("%d", &n3);
+
+    printf("Digite o 4º número: ");
+    scanf("%d", &n4);
+
+    printf("Digite o 5º número: ");
+    scanf("%d", &n5);
+
+    printf("\nNumeros consecutivos encontrados:\n");
+
+    if ((n1 + 1 == n2) || (n2 + 1 == n1))
+    {
+        printf("%d e %d\n", n1, n2);
+        achou = 1;
+    }
+
+    if ((n1 + 1 == n3) || (n3 + 1 == n1))
+    {
+        printf("%d e %d\n", n1, n3);
+        achou = 1;
+    }
+
+    if ((n1 + 1 == n4) || (n4 + 1 == n1))
+    {
+        printf("%d e %d\n", n1, n4);
+        achou = 1;
+    }
+
+    if ((n1 + 1 == n5) || (n5 + 1 == n1))
+    {
+        printf("%d e %d\n", n1, n5);
+        achou = 1;
+    }
+
+    if ((n2 + 1 == n3) || (n3 + 1 == n2))
+    {
+        printf("%d e %d\n", n2, n3);
+        achou = 1;
+    }
+
+    if ((n2 + 1 == n4) || (n4 + 1 == n2))
+    {
+        printf("%d e %d\n", n2, n4);
+        achou = 1;
+    }
+
+    if ((n2 + 1 == n5) || (n5 + 1 == n2))
+    {
+        printf("%d e %d\n", n2, n5);
+        achou = 1;
+    }
+
+    if ((n3 + 1 == n4) || (n4 + 1 == n3))
+    {
+        printf("%d e %d\n", n3, n4);
+        achou = 1;
+    }
+
+    if ((n3 + 1 == n5) || (n5 + 1 == n3))
+    {
+        printf("%d e %d\n", n3, n5);
+        achou = 1;
+    }
+
+    if ((n4 + 1 == n5) || (n5 + 1 == n4))
+    {
+        printf("%d e %d\n", n4, n5);
+        achou = 1;
+    }
+
+    if (achou == 0)
+    {
+        printf("Nenhum numero consecutivo foi encontrado.\n");
+    }
+}
+
+void prova1_questao1()
+{
+    float peso, altura, imc;
+
+    printf("\n---  ADSIS-N-A - QUESTAO 1 ---\n");
+
+    printf("Digite o peso em kg: ");
+    scanf("%f", &peso);
+
+    printf("Digite a altura em metros: ");
+    scanf("%f", &altura);
+
+    imc = peso / (altura * altura);
+
+    printf("\nIMC = %.2f\n", imc);
+
+    if (imc < 18.5)
+    {
+        printf("Classificacao: Abaixo do peso\n");
+    }
+    else if (imc <= 24.9)
+    {
+        printf("Classificacao: Normal\n");
+    }
+    else if (imc <= 29.9)
+    {
+        printf("Classificacao: Acima do peso\n");
+    }
+    else
+    {
+        printf("Classificacao: Obeso\n");
+    }
+}
+
+void prova1_questao2()
+{
+    int A, B, C;
+
+    printf("\n--- PROVA 1 - QUESTÃO 2 ---\n");
+
+    A = 6;
+    B = 0;
+    C = 0;
+
+    printf("\nEstado inicial:\n");
+    printf("A = %d | B = %d | C = %d\n\n", A, B, C);
+
+    printf("1) Disco 1: A -> C\n");
+    A = A - 1;
+    C = C + 1;
+    printf("A = %d | B = %d | C = %d\n", A, B, C);
+
+    printf("2) Disco 2: A -> B\n");
+    A = A - 2;
+    B = B + 2;
+    printf("A = %d | B = %d | C = %d\n", A, B, C);
+
+    printf("3) Disco 1: C -> B\n");
+    C = C - 1;
+    B = B + 1;
+    printf("A = %d | B = %d | C = %d\n", A, B, C);
+
+    printf("4) Disco 3: A -> C\n");
+    A = A - 3;
+    C = C + 3;
+    printf("A = %d | B = %d | C = %d\n", A, B, C);
+
+    printf("5) Disco 1: B -> A\n");
+    B = B - 1;
+    A = A + 1;
+    printf("A = %d | B = %d | C = %d\n", A, B, C);
+
+    printf("6) Disco 2: B -> C\n");
+    B = B - 2;
+    C = C + 2;
+    printf("A = %d | B = %d | C = %d\n", A, B, C);
+
+    printf("7) Disco 1: A -> C\n");
+    A = A - 1;
+    C = C + 1;
+    printf("A = %d | B = %d | C = %d\n", A, B, C);
+
+    printf("\nTorre resolvida!\n");
+    printf("A = %d\n", A);
+    printf("B = %d\n", B);
+    printf("C = %d\n", C);
+    printf("Quantidade de movimentos: 7\n");
+}
+
+void prova2_questao0()
+{
+    int n1, n2, n3, n4;
+
+    printf("\n--- ESOFT-M-A - QUESTAO 0 ---\n");
+
+    printf("Digite o 1º numero: ");
+    scanf("%d", &n1);
+
+    printf("Digite o 2º numero: ");
+    scanf("%d", &n2);
+
+    printf("Digite o 3º numero: ");
+    scanf("%d", &n3);
+
+    printf("Digite o 4º numero: ");
+    scanf("%d", &n4);
+
+    printf("\nNumeros impares:\n");
+
+    if (n1 % 2 != 0)
+    {
+        printf("%d\n", n1);
+    }
+
+    if (n2 % 2 != 0)
+    {
+        printf("%d\n", n2);
+    }
+
+    if (n3 % 2 != 0)
+    {
+        printf("%d\n", n3);
+    }
+
+    if (n4 % 2 != 0)
+    {
+        printf("%d\n", n4);
+    }
+
+    printf("\nMultiplos de 5:\n");
+
+    if (n1 % 5 == 0)
+    {
+        printf("%d\n", n1);
+    }
+
+    if (n2 % 5 == 0)
+    {
+        printf("%d\n", n2);
+    }
+
+    if (n3 % 5 == 0)
+    {
+        printf("%d\n", n3);
+    }
+
+    if (n4 % 5 == 0)
+    {
+        printf("%d\n", n4);
+    }
+}
+
+void prova2_questao1()
+{
+    int total, capacidade;
+    int mochilas, sobra;
+
+    printf("\n--- ESOFT-M-A - QUESTAO 1 ---\n");
+
+    printf("Digite a quantidade total de itens: ");
+    scanf("%d", &total);
+
+    printf("Digite a capacidade de cada mochila: ");
+    scanf("%d", &capacidade);
+
+    mochilas = total / capacidade;
+    sobra = total % capacidade;
+
+    printf("\nQuantidade de mochilas totalmente preenchidas: ");
+    printf("%d\n", mochilas);
+
+    printf("Quantidade de itens que sobraram: ");
+    printf("%d\n", sobra);
+}
+
+void prova2_questao2()
+{
+    float valor, resultado;
+    int codigo;
+
+    printf("\n--- ESOFT-M-A - QUESTAO 2 ---\n");
+
+    printf("Digite o valor: ");
+    scanf("%f", &valor);
+
+    printf("\nCodigos disponiveis:\n");
+    printf("1 - Celsius para Fahrenheit\n");
+    printf("2 - Fahrenheit para Celsius\n");
+    printf("3 - Celsius para Kelvin\n");
+    printf("4 - Metro para Milha\n");
+    printf("5 - Milha para Metro\n");
+    printf("8 - Quilograma para Libra\n");
+    printf("9 - Libra para Quilograma\n");
+    printf("10 - km/h para mph\n");
+    printf("11 - mph para km/h\n");
+
+    printf("\nDigite o codigo da conversao: ");
+    scanf("%d", &codigo);
+
+    switch (codigo)
+    {
+        case 1:
+            resultado = valor * 1.8 + 32;
+            printf("\nResultado em Fahrenheit: %.2f\n", resultado);
+            break;
+
+        case 2:
+            resultado = (valor - 32) / 1.8;
+            printf("\nResultado em Celsius: %.2f\n", resultado);
+            break;
+
+        case 3:
+            resultado = valor + 273.15;
+            printf("\nResultado em Kelvin: %.2f\n", resultado);
+            break;
+
+        case 4:
+            resultado = valor / 1609.34;
+            printf("\nResultado em milhas: %.4f\n", resultado);
+            break;
+
+        case 5:
+            resultado = valor * 1609.34;
+            printf("\nResultado em metros: %.2f\n", resultado);
+            break;
+
+        case 8:
+            resultado = valor * 2.205;
+            printf("\nResultado em libras: %.2f\n", resultado);
+            break;
+
+        case 9:
+            resultado = valor / 2.205;
+            printf("\nResultado em quilogramas: %.2f\n", resultado);
+            break;
+
+        case 10:
+            resultado = valor / 1.609;
+            printf("\nResultado em mph: %.2f\n", resultado);
+            break;
+
+        case 11:
+            resultado = valor * 1.609;
+            printf("\nResultado em km/h: %.2f\n", resultado);
+            break;
+
+        default:
+            printf("\nERRO: codigo de unidade invalido.\n");
+    }
+}
+
+void prova3_questao0()
+{
+    int total, capacidade;
+    int mochilas, sobra;
+
+    printf("\n--- ESOFT-M-B - QUESTAO 0 ---\n");
+
+    printf("Digite a quantidade total de itens: ");
+    scanf("%d", &total);
+
+    printf("Digite a capacidade de cada mochila: ");
+    scanf("%d", &capacidade);
+
+    mochilas = total / capacidade;
+    sobra = total % capacidade;
+
+    printf("\nMochilas totalmente preenchidas: %d\n", mochilas);
+    printf("Itens que sobraram: %d\n", sobra);
+}
+
+void prova3_questao1()
+{
+    int a, b, c;
+
+    printf("\n--- ESOFT-M-B - QUESTAO 1 ---\n");
+
+    printf("Digite o valor de a: ");
+    scanf("%d", &a);
+
+    printf("Digite o valor de b: ");
+    scanf("%d", &b);
+
+    printf("Digite o valor de c: ");
+    scanf("%d", &c);
+
+    if ((a == b) || (a == c) || (b == c))
+    {
+        printf("\nOs numeros tem que ser distintos.\n");
+    }
+    else
+    {
+        printf("\nOrdem crescente: ");
+
+        if ((a < b) && (a < c))
+        {
+            if (b < c)
+            {
+                printf("%d %d %d\n", a, b, c);
+            }
+            else
+            {
+                printf("%d %d %d\n", a, c, b);
+            }
+        }
+        else if ((b < a) && (b < c))
+        {
+            if (a < c)
+            {
+                printf("%d %d %d\n", b, a, c);
+            }
+            else
+            {
+                printf("%d %d %d\n", b, c, a);
+            }
+        }
+        else
+        {
+            if (a < b)
+            {
+                printf("%d %d %d\n", c, a, b);
+            }
+            else
+            {
+                printf("%d %d %d\n", c, b, a);
+            }
+        }
+    }
+}
+
+void prova3_questao2()
+{
+    float valor1, valor2;
+    int codigo;
+    int resultado;
+
+    printf("\n--- ESOFT-M-B - QUESTAO 2 ---\n");
+
+    printf("Digite o primeiro valor: ");
+    scanf("%f", &valor1);
+
+    printf("Digite o segundo valor: ");
+    scanf("%f", &valor2);
+
+    printf("\nOperacoes:\n");
+    printf("1 - Maior que (>)\n");
+    printf("2 - Menor que (<)\n");
+    printf("3 - Igual a (==)\n");
+    printf("4 - Diferente (!=)\n");
+
+    printf("\nDigite o codigo da operacao: ");
+    scanf("%d", &codigo);
+
+    switch (codigo)
+    {
+        case 1:
+            resultado = valor1 > valor2;
+            printf("\nResultado: %d\n", resultado);
+            break;
+
+        case 2:
+            resultado = valor1 < valor2;
+            printf("\nResultado: %d\n", resultado);
+            break;
+
+        case 3:
+            resultado = valor1 == valor2;
+            printf("\nResultado: %d\n", resultado);
+            break;
+
+        case 4:
+            resultado = valor1 != valor2;
+            printf("\nResultado: %d\n", resultado);
+            break;
+
+        default:
+            printf("\noperador inválido\n");
+    }
 }
 
 int main(int argc, char *argv[]) {
+    int prova, questao;
 
-	int dg1, dg2, dg3, dg4, dg5, dg6,dg7, dg8, dg9, dv, dv2, soma, resto;
+    printf("====================================\n");
+    printf("        MENU DE PROVAS\n");
+    printf("====================================\n");
+    printf("1 - Prova 1\n");
+    printf("2 - Prova 2\n");
+    printf("3 - Prova 3\n");
 
-	scanf("%d %d %d . %d %d %d . %d %d %d - %d %d",
-		&dg1, &dg2, &dg3, &dg4, &dg5, &dg6, &dg7, &dg8, &dg9, &dv, &dv2);
+    printf("\nEscolha a prova: ");
+    scanf("%d", &prova);
 
-	printf(" confirme o cpf: %d%d%d.%d%d%d.%d%d%d-%d%d",
-		dg1, dg2, dg3, dg4, dg5, dg6, dg7, dg8, dg9, dv, dv2);
-		
-	soma = mult(dg1,10)+mult(dg2,9)+mult(dg3,8)+mult(dg4,7)+mult(dg5,6)+mult(dg6,5)
-		+mult(dg7,4)+mult(dg8,3)+mult(dg9,2);
-	soma *= 10;
-	resto = soma%11;
+    printf("\n====================================\n");
+    printf("          ESCOLHA A QUESTAO\n");
+    printf("====================================\n");
+    printf("0 - Questao 0\n");
+    printf("1 - Questao 1\n");
+    printf("2 - Questao 2\n");
 
-	return 0;
+    printf("\nEscolha a questao: ");
+    scanf("%d", &questao);
 
+    switch (prova)
+    {
+        case 1:
+            switch (questao)
+            {
+                case 0:
+                    prova1_questao0();
+                    break;
+                case 1:
+                    prova1_questao1();
+                    break;
+                case 2:
+                    prova1_questao2();
+                    break;
+                default:
+                    printf("\nQuestao invalida.\n");
+            }
+            break;
+
+        case 2:
+            switch (questao)
+            {
+                case 0:
+                    prova2_questao0();
+                    break;
+                case 1:
+                    prova2_questao1();
+                    break;
+                case 2:
+                    prova2_questao2();
+                    break;
+                default:
+                    printf("\nQuestao invalida.\n");
+            }
+            break;
+
+        case 3:
+            switch (questao)
+            {
+                case 0:
+                    prova3_questao0();
+                    break;
+                case 1:
+                    prova3_questao1();
+                    break;
+                case 2:
+                    prova3_questao2();
+                    break;
+                default:
+                    printf("\nQuestao invalida.\n");
+            }
+            break;
+
+        default:
+            printf("\nProva invalida.\n");
+    }
+
+    return 0;
 }
