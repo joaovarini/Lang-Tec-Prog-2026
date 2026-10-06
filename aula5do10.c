@@ -1,7 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-/* Faça um programa que LEIA 10 valores do teclado, 
+/* FaÃ§a um programa que LEIA 10 valores do teclado, 
 e mostre na tela o maior entre os 5 primeiros 
 e o menor entre os 5 restantes */
 
