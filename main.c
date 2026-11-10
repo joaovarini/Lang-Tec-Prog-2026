@@ -1,22 +1,20 @@
 #include <stdio.h>
 #include <stdlib.h>
-
-/* faça um programa que Leia 10 numeros inteiros postivios, calcule a soma e a média e mostre na tela.
-OBS: somente com 3 variaveis (i, n, s). Nao pode ser vetor.
-Nao pode usar laço FOR*/
+#define tam 10
+int calcula_maior (int a, int b){
+	return ((a+b+(abs((a-b))))/2);
+}
 
 int main(int argc, char *argv[]) {
-	int i, n, s;
+	int vet[10];
+	int i, maior;
+
+	for(i=0; i<10; i++){
+		scanf("%d", &vet[i]);
+	}
 	
-	while (i<10){
-		scanf("%d", &n);
-		if (n > 0){
-			s += n;
-			i++;
-		}
+	for(i=1, maior=vet[0]; i<10; i++){
 		
 	}
-	printf("%d | %d", s, s/10);
-	
 	return 0;
 }
